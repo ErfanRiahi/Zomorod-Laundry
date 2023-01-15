@@ -1,0 +1,326 @@
+body {
+  margin: 0;
+}
+
+header {
+  background-color: #50c878;
+}
+
+header ul {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+}
+
+header ul li {
+  padding: 0 15px;
+  font-weight: bold;
+  font-size: large;
+}
+
+header ul li span {
+  color: white;
+}
+
+.links {
+  text-decoration: none;
+  color: white;
+}
+
+.links:hover {
+  color: black;
+}
+
+.rightSide {
+  margin-left: auto;
+}
+
+/********************** photos of headers **********************/
+.headerPhotos {
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.outside-photo {
+  background-image: url(../assets/img/Zomorrod.jpg);
+}
+
+.services-photo {
+  background-image: url(https://boltlaundry.com/wp-content/uploads/2020/04/washing.jpg);
+}
+
+.curtains-photo {
+  background-image: url(https://static.hillarys.co.uk/asset/media/34528/hil-2021-voileslaunch-voile-curtains-adrift-inkwash-landscape-2-living-room-bay.jpg?cb=20221409111227&mcb=5f884e47a7424cfe86340315ccaafed0);
+}
+
+.duvets-photo {
+  background-image: url(https://media.houseandgarden.co.uk/photos/629ddfb7a7cb11e7b074f9e1/3:2/w_2009,h_1339,c_limit/june3.jpg);
+}
+
+.leather-photo {
+  background-image: url(https://laundrybox.com.au/wp-content/uploads/2017/06/Leather-Suede-and-Fur-Cleaning_Laundry-Box.jpg);
+}
+
+.about-photo {
+  background-image: url(https://www.rd.com/wp-content/uploads/2016/11/05_suprising_facts_laundry_todays_washer_Milkos.jpg);
+}
+
+.contact-photo {
+  background-image: url(https://img.freepik.com/premium-photo/contact-us_36325-2135.jpg?w=2000);
+}
+
+.titleInCenter {
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  color: white;
+  font-size: 4em;
+}
+/********************** photos of headers **********************/
+
+#order-now {
+  background-color: #50c878;
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: 400px;
+  left: 100px;
+}
+
+#summary {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  color: white;
+  background-color: #50c878;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.titles {
+  text-align: center;
+}
+
+.threeColumns {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  padding: 0 40px;
+  margin-bottom: 50px;
+}
+
+.how-it-works-items {
+  padding: 0 30px;
+  font-size: 1.5em;
+}
+
+.order-btn {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.order-btn a {
+  background-color: #50c878;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+footer {
+  background-color: #50c878;
+  color: white;
+}
+
+#contactUs {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+#hours {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+#hours div {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+#copyright {
+  text-align: center;
+  padding: 10px;
+}
+
+.imageOfServices {
+  width: 100%;
+}
+
+#services {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+#services > div {
+  width: 30%;
+}
+
+/* Curtains & Net Curtains */
+.whereAmI {
+  padding: 20px;
+  border-bottom: 1px solid lightgray;
+}
+.whereAmI a {
+  padding: 0 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto 100px auto;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.content p {
+  width: 90%;
+}
+
+.redStar {
+  color: red;
+}
+
+.question {
+  resize: none;
+  width: 100%;
+  height: 100px;
+}
+
+.line {
+  border-top: 1px solid lightgray;
+}
+
+.forms {
+  width: 80%;
+  margin: 0 auto 50px auto;
+}
+
+.forms h1 {
+  text-align: center;
+}
+.forms input {
+  height: 20px;
+}
+.nameEmailTel {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-bottom: 10px;
+}
+
+.forms input[type="submit"] {
+  padding: 10px 30px 22px 30px;
+  text-align: center;
+  transition-property: background-color, color, border, border-radius;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-out;
+}
+
+.forms input[type="submit"]:hover {
+  background-color: #50c878;
+  border: 2px solid #50c878;
+  border-radius: 5px;
+  color: white;
+}
+
+.signUp {
+  border: 3px solid #50c878;
+  border-radius: 10px;
+  width: 40%;
+  margin: 5% auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.signUp > div {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 20px;
+}
+
+.signUp div > * {
+  display: block;
+  margin: 20px 0;
+  padding: 5px;
+  width: 90%;
+}
+
+.signUp > span a {
+  text-decoration: none;
+  color: black;
+}
+
+.signUp > span a:hover {
+  font-weight: bold;
+  color: #50c878;
+}
+
+.signUp button {
+  width: 80%;
+  height: 40px;
+  font-size: 1.2em;
+}
+
+#forgetPassword {
+  text-align: left;
+}
+
+#forgetPassword a {
+  color: black;
+  text-decoration: none;
+}
+
+/******************************* order page ********************************/
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  margin: 10px;
+}
+
+.product {
+  width: fit-content;
+  display: grid;
+  grid-template-rows: auto auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 10px;
+  font-size: 1.3em;
+}
+
+.product * {
+  margin: 0 auto;
+}
+
+.bill {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.bill > div,
+.PPrice {
+  display: flex;
+  flex-direction: column;
+}

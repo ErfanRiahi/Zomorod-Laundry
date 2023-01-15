@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up | Zomorod Laundry</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d1c68e1377.js" crossorigin="anonymous"></script>
+    <script src="../components/header.js" type="text/javascript"></script>
+    <script src="../components/footer.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <header-component></header-component>
+    <div class="signUp">
+        <h1>Sign up</h1>
+        <div>
+            <div>
+                <label for="customerName">Name<span class="redStar">*</span></label>
+                <label for="customerTel">Tel<span class="redStar">*</span></label>
+                <label for="customerEmail">Email<span class="redStar">*</span></label>
+                <label for="customerPassword">Password<span class="redStar">*</span></label>
+                <label for="customerAddress">Address</label>
+            </div>
+            <div>
+                <input type="text" id="customerName">
+                <input type="tel" id="customerTel">
+                <input type="email" id="customerEmail">
+                <input type="password" id="customerPassword">
+                <textarea id="customerAddress" class="question"></textarea>
+            </div>
+        </div>
+        <span>Already have an account? <a href="login.html">Login</a></span>
+        <button id="signUp">Sign up</button>
+    </div>
+    <script src="sign-up.js"></script>
+</body>
+
+</html>
