@@ -21,7 +21,9 @@ signUpBtn.addEventListener("click", () => {
 
   fetch("https://cleancloudapp.com/api/addCustomer", {
     method: "POST",
-    headers: "application/json",
+    headers: {
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify(data),
   })
     .then((response) => response.json())

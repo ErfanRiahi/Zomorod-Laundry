@@ -82,3 +82,20 @@ getUser.addEventListener("click", () => {
 
   request.send(JSON.stringify(body));
 });
+
+const productBtn = document.querySelector("#product");
+productBtn.addEventListener("click", () => {
+  let data = {
+    api_token: "e1cfd0f9b4a1f8f5d200749b797d43d5e07c0ada",
+  };
+  fetch("https://cleancloudapp.com/api/getProducts", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  })
+    .then((response) => response.json())
+    .then((data) => console.log("Success", data))
+    .catch((err) => console.log("Error", err));
+});
