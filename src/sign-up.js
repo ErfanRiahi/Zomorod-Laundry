@@ -28,5 +28,18 @@ signUpBtn.addEventListener("click", () => {
     .then((data) => console.log("Success", data))
     .catch((error) => console.log("Error", error));
 
-  location.href = "home.html";
+  location.href = "login.html";
 });
+
+fetch(
+  "https://api.ipgeolocation.io/ipgeo?apiKey=38f2a274c2c54cf099ede910260a9b92"
+)
+  .then((response) => response.json())
+  .then((data) => setCallingCode(data))
+  .catch((error) => console.log("Error", error));
+
+function setCallingCode(data) {
+  console.log("Success", data);
+  const callCode = document.querySelector("input[type='tel'");
+  callCode.value = data.calling_code;
+}

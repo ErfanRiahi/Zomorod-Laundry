@@ -302,25 +302,69 @@ footer {
   margin: 10px;
 }
 
-.product {
-  width: fit-content;
+.products > div {
+  width: 110px;
   display: grid;
   grid-template-rows: auto auto;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 10px;
-  font-size: 1.3em;
+  gap: 5px;
 }
 
-.product * {
+.products > div > * {
   margin: 0 auto;
 }
 
+.products > div > div {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 5px;
+}
+
 .bill {
+  width: 262px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 60px;
+  margin-left: 10px;
+}
+
+.plusBtn,
+.minusBtn {
+  padding: 3px;
+  transition: background-color 0.2s, color 0.1s;
+}
+
+.plusBtn:hover,
+.minusBtn:hover {
+  background-color: #50c878;
+  color: white;
+}
+
+table {
+  width: 30%;
+  margin: 10px 0 10px 10px;
+}
+
+.TCenter {
+  text-align: center;
+}
+
+.totalPriceBtn {
   display: grid;
   grid-template-columns: auto auto;
+  background-color: #50c878;
+  color: white;
+  text-decoration: none;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+  opacity: 0.75;
+  transition: opacity 0.1s;
 }
-.bill > div,
-.PPrice {
-  display: flex;
-  flex-direction: column;
+
+.totalPriceBtn:hover {
+  opacity: 1;
 }

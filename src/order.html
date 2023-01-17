@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order | Zomorod Laundry</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d1c68e1377.js" crossorigin="anonymous"></script>
     <script src="../components/header.js"></script>
     <script src="../components/footer.js"></script>
 </head>
@@ -15,87 +16,100 @@
     <header-component></header-component>
     <main>
         <div class="products">
-            <div class="product">
+            <!-- <div>
                 <span>Blouse</span>
                 <img src="https://s3.us-east-2.amazonaws.com/cleancloudapp/ic/b/13.png" alt="blouse">
             </div>
-            <div class="product">
+            <div>
                 <span>Dress</span>
                 <img src="https://s3.us-east-2.amazonaws.com/cleancloudapp/ic/b/23.png" alt="dress">
             </div>
-            <div class="product">
+            <div>
                 <span>Dress, Evening</span>
                 <img src="https://s3.us-east-2.amazonaws.com/cleancloudapp/ic/b/21.png" alt="dress-evening">
             </div>
-            <div class="product">
+            <div>
                 <span>Hat</span>
                 <img src="https://s3.us-east-2.amazonaws.com/cleancloudapp/ic/b/33.png" alt="hat">
             </div>
-            <div class="product">
+            <div>
                 <span>Jacket</span>
                 <img src="https://s3.us-east-2.amazonaws.com/cleancloudapp/ic/b/34.png" alt="jacket">
             </div>
-            <div class="product">
+            <div>
                 <span>Jeans</span>
                 <img src="https://s3.us-east-2.amazonaws.com/cleancloudapp/ic/b/52.png" alt="jeans">
             </div>
-            <div class="product">
+            <div>
                 <span>Jumpsuit</span>
                 <img src="https://s3.us-east-2.amazonaws.com/cleancloudapp/ic/b/20.png" alt="jumpsuit">
             </div>
-            <div class="product">
+            <div>
                 <span>Overcoat</span>
                 <img src="https://s3.us-east-2.amazonaws.com/cleancloudapp/ic/b/40.png" alt="overcoat">
             </div>
-            <div class="product">
+            <div>
                 <span>Polo Shirt</span>
                 <img src="https://s3.us-east-2.amazonaws.com/cleancloudapp/ic/b/61.png" alt="poloShirt">
             </div>
-            <div class="product">
+            <div>
                 <span>Scarf</span>
                 <img src="https://s3.us-east-2.amazonaws.com/cleancloudapp/ic/b/58.png" alt="scarf">
             </div>
-            <div class="product">
+            <div>
                 <span>Shirt</span>
                 <img src="https://s3.us-east-2.amazonaws.com/cleancloudapp/ic/b/60.png" alt="shirt">
             </div>
-            <div class="product">
+            <div>
                 <span>Skirt</span>
                 <img src="https://s3.us-east-2.amazonaws.com/cleancloudapp/ic/b/81.png" alt="skirt">
             </div>
-            <div class="product">
+            <div>
                 <span>Skirt, pleated</span>
                 <img src="https://s3.us-east-2.amazonaws.com/cleancloudapp/ic/b/79.png" alt="skirt-pleated">
             </div>
-            <div class="product">
+            <div>
                 <span>Suit</span>
                 <img src="https://s3.us-east-2.amazonaws.com/cleancloudapp/ic/b/95.png" alt="suit">
             </div>
-            <div class="product">
+            <div>
                 <span>Sweater</span>
                 <img src="https://s3.us-east-2.amazonaws.com/cleancloudapp/ic/b/44.png" alt="sweater">
             </div>
-            <div class="product">
-                <span>tie</span>
+            <div>
+                <span>Tie</span>
                 <img src="https://s3.us-east-2.amazonaws.com/cleancloudapp/ic/b/90.png" alt="tie">
             </div>
-            <div class="product">
+            <div>
                 <span>Trousers</span>
                 <img src="https://s3.us-east-2.amazonaws.com/cleancloudapp/ic/b/57.png" alt="trousers">
             </div>
-            <div class="product">
+            <div>
                 <span>Waistcoat</span>
                 <img src="https://s3.us-east-2.amazonaws.com/cleancloudapp/ic/b/94.png" alt="waistcoat">
-            </div>
+            </div> -->
         </div>
-        <div class="bill line">
-            <div class="PName">
-
-            </div>
-            <div class="PPrice">
-
-            </div>
-        </div>
+        <!-- <div class="bill line"></div> -->
+        <table border="2px">
+            <thead>
+                <tr>
+                    <th colspan="3">Your bill</th>
+                </tr>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">
+                        <a href="#" class="totalPriceBtn"><span>Submit</span><span class="finalPrice">IRR0.00</span></a>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
     </main>
     <footer-component></footer-component>
     <script src="order.js"></script>

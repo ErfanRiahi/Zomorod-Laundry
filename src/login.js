@@ -1,6 +1,12 @@
 const customerEmail = document.querySelector("#customerEmail");
 const customerPassword = document.querySelector("#customerPassword");
 const loginBtn = document.querySelector("#login");
+const profile = document.querySelector(".rightSide");
+const Login = document.querySelector("h1");
+
+Login.addEventListener("click", () => {
+  profile.innerHTML = '<i class="fa-regular fa-user"></i> ';
+});
 
 loginBtn.addEventListener("click", () => {
   if (!customerEmail.value || !customerPassword.value) {
