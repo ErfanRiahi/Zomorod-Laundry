@@ -352,7 +352,7 @@ table {
 
 .totalPriceBtn {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   background-color: #50c878;
   color: white;
   text-decoration: none;
@@ -394,4 +394,14 @@ table {
   background-color: #50c878 !important;
   color: white !important;
   border-radius: 5px;
+}
+
+.clearBill:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.submitBill:hover {
+  color: black;
+  cursor: pointer;
 }

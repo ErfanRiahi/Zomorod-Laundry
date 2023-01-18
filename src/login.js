@@ -28,10 +28,11 @@ loginBtn.addEventListener("click", () => {
     body: JSON.stringify(data),
   })
     .then((response) => response.json())
-    .then((data) => console.log("Success", data))
+    .then((data) => {
+      getUser(data.cid);
+      // console.log("Success", data);
+    })
     .catch((error) => console.log("Error", error));
-
-  location.href = "home.html";
 });
 
 const updateInfo = document.querySelector("#update");
@@ -59,29 +60,29 @@ updateInfo.addEventListener("click", () => {
   request.send(JSON.stringify(body));
 });
 
-const getUser = document.querySelector("#user");
-getUser.addEventListener("click", () => {
-  var request = new XMLHttpRequest();
+const user = document.querySelector("#user");
+const getUser = async (cid) => {
+  try {
+    let body = {
+      api_token: "e1cfd0f9b4a1f8f5d200749b797d43d5e07c0ada",
+      customerID: `${cid}`,
+    };
 
-  request.open("POST", "https://cleancloudapp.com/api/getCustomer");
-
-  request.setRequestHeader("Content-Type", "application/json");
-
-  request.onreadystatechange = function () {
-    if (this.readyState === 4) {
-      console.log("Status:", this.status);
-      console.log("Headers:", this.getAllResponseHeaders());
-      console.log("Body:", this.responseText);
-    }
-  };
-
-  var body = {
-    api_token: "e1cfd0f9b4a1f8f5d200749b797d43d5e07c0ada",
-    customerID: "2",
-  };
-
-  request.send(JSON.stringify(body));
-});
+    const res = await fetch("https://cleancloudapp.com/api/getCustomer", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    });
+    const data = await res.json();
+    // return data;
+    // console.log(data);
+    setProfile(data);
+  } catch (error) {
+    alert("something went wrong\n" + error);
+  }
+};
 
 const productBtn = document.querySelector("#product");
 productBtn.addEventListener("click", () => {
@@ -99,3 +100,29 @@ productBtn.addEventListener("click", () => {
     .then((data) => console.log("Success", data))
     .catch((err) => console.log("Error", err));
 });
+
+const getOrder = document.querySelector("#getOrder");
+getOrder.addEventListener("click", () => {
+  let data = {
+    api_token: "e1cfd0f9b4a1f8f5d200749b797d43d5e07c0ada",
+    customerID: "1",
+  };
+
+  fetch("https://cleancloudapp.com/api/getOrders", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  })
+    .then((response) => response.json())
+    .then((data) => console.log("Success", data))
+    .catch((err) => console.log("Error", err));
+});
+
+function setProfile(data) {
+  const name = data.Name;
+  profile.innerHTML = `<i class="fa-regular fa-user"></i> ${name}`;
+  profile.style.color = "white";
+  location.href = "home.html";
+}

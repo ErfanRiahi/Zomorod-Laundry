@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order | Zomorod Laundry</title>
+    <link rel="icon" type="image/png" href="../assets/img/washing-machine.png" />
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/d1c68e1377.js" crossorigin="anonymous"></script>
     <script src="../components/header.js"></script>
@@ -24,13 +25,13 @@
                 <li id="m5">Alternations</li>
             </ul>
         </nav>
-        <!-- <div class="products"> -->
-        <div class="dry products"></div>
-        <div class="laundry products"></div>
-        <div class="pressed products"></div>
-        <div class="repairs products"></div>
-        <div class="alternations products"></div>
-        <!-- </div> -->
+        <div class="allPages">
+            <div class="dry products"></div>
+            <div class="laundry products"></div>
+            <div class="pressed products"></div>
+            <div class="repairs products"></div>
+            <div class="alternations products"></div>
+        </div>
         <table border="2px">
             <thead>
                 <tr>
@@ -47,7 +48,11 @@
             <tfoot>
                 <tr>
                     <td colspan="4">
-                        <a href="#" class="totalPriceBtn"><span>Submit</span><span class="finalPrice">IRR0.00</span></a>
+                        <div class="totalPriceBtn">
+                            <span class="clearBill">Clear list</span>
+                            <span class="submitBill">Submit</span>
+                            <span class="finalPrice">IRR0.00</span>
+                        </div>
                     </td>
                 </tr>
             </tfoot>

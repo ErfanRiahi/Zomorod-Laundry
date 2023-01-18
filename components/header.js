@@ -7,7 +7,7 @@ class Header extends HTMLElement {
     <header>
         <nav>
             <ul>
-                <li><a href="home.html" class="links">Home</a></li>
+                <li><a href="index.html" class="links">Home</a></li>
                 <li><a href="services.html" class="links">Services</a></li>
                 <li><a href="order.html" class="links">Order</a></li>
                 <li><a href="about.html" class="links">About</a></li>                                

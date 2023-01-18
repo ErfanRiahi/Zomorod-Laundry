@@ -1,7 +1,9 @@
 const productsDiv = document.querySelector(".products");
 const billDiv = document.querySelector("table");
-const submit_btn = document.querySelector(".totalPriceBtn");
+const submit_btn = document.querySelector(".submitBill");
+const clear_btn = document.querySelector(".clearBill");
 const menu = document.querySelector(".sectionMenu");
+const allPages = document.querySelector(".allPages");
 const dry = document.querySelector(".dry");
 const laundry = document.querySelector(".laundry");
 const pressed = document.querySelector(".pressed");
@@ -98,26 +100,26 @@ function main(data) {
       )[0].style.display = "grid";
     }
   });
+  selectProduct(data);
 }
 
 let orderList = [];
 function selectProduct(data) {
-  productsDiv.addEventListener("click", (e) => {
+  allPages.addEventListener("click", (e) => {
     let targetId = e.target.id.slice(2);
     const product = document.querySelector(`#pc${targetId}`);
-    const name = document.querySelector(`#na${targetId}`);
-    const price = document.querySelector(`#pr${targetId}`);
     const quantity = document.querySelector(`#qu${targetId}`);
-
+    const productInData = data.filter((item) => item.id == targetId)[0];
     if (e.target.id.slice(0, 2) === "in") {
       quantity.innerText = +quantity.innerText + 1;
       product.style.backgroundColor = "#50C87861";
       if (!orderList.some((item) => item.id == targetId))
         orderList.push({
           id: targetId,
-          name: data[targetId].name,
-          price: data[targetId].price,
+          price: productInData.price,
+          pieces: productInData.pieces,
           quantity: quantity.innerText,
+          name: productInData.name,
         });
       else if (orderList.some((item) => item.id == targetId))
         +orderList.filter((item) => item.id == targetId)[0].quantity++;
@@ -181,20 +183,40 @@ function calculateTotalPrice(orders) {
   finalPrice = totalPrice.toFixed(2);
 }
 
+clear_btn.addEventListener("click", () => {
+  const listInBill = document.querySelector("tbody");
+  listInBill.innerHTML = "";
+  for (let i = 0; i < 5; i++) {
+    orderList.forEach((orderItem) => {
+      const selectedItem = [...allPages.children[i].children].filter(
+        (productItem) => productItem.id.slice(2) == orderItem.id
+      );
+      if (selectedItem.length != 0) {
+        selectedItem[0].style.backgroundColor = "white";
+        selectedItem[0].children[3].children[1].innerText = 0;
+      }
+    });
+  }
+  orderList = [];
+});
+
 submit_btn.addEventListener("click", () => {
+  if (orderList.length == 0) return;
   let data = {
     api_token: "e1cfd0f9b4a1f8f5d200749b797d43d5e07c0ada",
     customerID: "1",
     products: orderList,
     finalTotal: finalPrice,
   };
-  console.log(finalPrice);
-  // fetch("https://cleancloudapp.com/api/addOrder", {
-  //   method: "POST",
-  //   headers: "application/json",
-  //   body: JSON.stringify(data),
-  // })
-  //   .then((response) => response.json())
-  //   .then((data) => console.log(data))
-  //   .catch((err) => console.log(err));
+  // console.log(orderList);
+  fetch("https://cleancloudapp.com/api/addOrder", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((err) => console.log(err));
 });
