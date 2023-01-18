@@ -217,6 +217,9 @@ submit_btn.addEventListener("click", () => {
     body: JSON.stringify(data),
   })
     .then((response) => response.json())
-    .then((data) => console.log(data))
+    .then((data) => {
+      alert(`Your order id is: ${data.orderID}\nHave a nice day :)`);
+      location.href = "../index.html";
+    })
     .catch((err) => console.log(err));
 });
