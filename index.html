@@ -6,15 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zomorod Laundry</title>
-    <link rel="icon" type="image/png" href="../assets/img/washing-machine.png" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/img/washing-machine.png" />
+    <link rel="stylesheet" href="src/style.css">
     <script src="https://kit.fontawesome.com/d1c68e1377.js" crossorigin="anonymous"></script>
-    <script src="../../Zomorod-Laundry/components/header.js"></script>
-    <script src="../components/footer.js"></script>
 </head>
 
 <body>
-    <header-component></header-component>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="links">Home</a></li>
+                <li><a href="src/services.html" class="links">Services</a></li>
+                <li><a href="src/order.html" class="links">Order</a></li>
+                <li><a href="src/about.html" class="links">About</a></li>
+                <li class="rightSide"><a href="src/sign-up.html" class="links signUpInHeader">Sign up</a><span> /
+                    </span><a href="src/login.html" class="links login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <div class="outside-photo headerPhotos">
             <h1 class="titleInCenter">Zomorod Laundry</h1>
@@ -42,7 +51,7 @@
         <div class="threeColumns">
 
 
-            <img src="../assets/img/curtian.svg" alt="curtian">
+            <img src="assets/img/curtian.svg" alt="curtian">
             <div>
 
                 <h2>Curtains & Net Curtains</h2>
@@ -53,7 +62,7 @@
                     that to get this is done by a specialist. Look no further, you’ve come to the right place.</p>
             </div>
 
-            <img src="../assets/img/bed.svg" alt="bed">
+            <img src="assets/img/bed.svg" alt="bed">
             <div>
                 <h2>Duvets & Sheet Packages</h2>
                 <p>Even though you might not clean your duvets daily, it is important to do it every once in a while for
@@ -65,7 +74,7 @@
             </div>
 
 
-            <img src="../assets/img/leather.svg" alt="leather">
+            <img src="assets/img/leather.svg" alt="leather">
             <div>
 
 
@@ -75,8 +84,8 @@
 
         </div>
     </main>
-    <footer-component></footer-component>
-    <script src="app.js"></script>
+    <footer class="mainFooter"></footer>
+    <script type="module" src="src/app.js"></script>
 </body>
 
 </html>

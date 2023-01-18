@@ -76,8 +76,6 @@ const getUser = async (cid) => {
       body: JSON.stringify(body),
     });
     const data = await res.json();
-    // return data;
-    // console.log(data);
     setProfile(data);
   } catch (error) {
     alert("something went wrong\n" + error);
@@ -124,5 +122,5 @@ function setProfile(data) {
   const name = data.Name;
   profile.innerHTML = `<i class="fa-regular fa-user"></i> ${name}`;
   profile.style.color = "white";
-  location.href = "home.html";
+  // location.href = "index.html";
 }

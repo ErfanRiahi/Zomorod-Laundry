@@ -215,15 +215,15 @@ footer {
   border-top: 1px solid lightgray;
 }
 
-.forms {
+.myForm {
   width: 80%;
   margin: 0 auto 50px auto;
 }
 
-.forms h1 {
+.myForm h1 {
   text-align: center;
 }
-.forms input {
+.myForm input {
   height: 20px;
 }
 .nameEmailTel {
@@ -232,7 +232,7 @@ footer {
   margin-bottom: 10px;
 }
 
-.forms input[type="submit"] {
+.myForm input[type="submit"] {
   padding: 10px 30px 22px 30px;
   text-align: center;
   transition-property: background-color, color, border, border-radius;
@@ -240,7 +240,7 @@ footer {
   transition-timing-function: ease-out;
 }
 
-.forms input[type="submit"]:hover {
+.myForm input[type="submit"]:hover {
   background-color: #50c878;
   border: 2px solid #50c878;
   border-radius: 5px;
