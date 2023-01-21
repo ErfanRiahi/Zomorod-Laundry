@@ -16,8 +16,3 @@ bars.addEventListener("click", () => {
     sidebarMenu.style.opacity = "0";
   }
 });
-
-main.addEventListener("click", () => {
-  sidebarMenu.style.display = "none";
-  flag = false;
-});

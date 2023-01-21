@@ -2,19 +2,29 @@ export function myHeader() {
   const header = document.querySelector(".mainHeader");
   header.innerHTML = `
     <header>
+        <nav id="main-menu">
+            <ul>
+                <li><a href="../index.html" class="links">Home</a></li>
+                <li><a href="services.html" class="links">Services</a></li>
+                <li><a href="order.html" class="links">Order</a></li>
+                <li><a href="about.html" class="links">About</a></li>
+                <li class="rightSide"><a href="sign-up.html" class="links">Sign up</a><span> /
+                    </span><a href="login.html" class="links login">Login</a></li>
+            </ul>
+        </nav>
         <nav id="sidebar-menu">
             <div id="bar-signUp">
                 <i class="fa-solid fa-bars bars"></i>
-                <a href="src/sign-up.html" class="links signUp-btn">Sign up</a>
+                <a href="sign-up.html" class="links signUp-btn">Sign up</a>
             </div>
             <ul>
-                <li><a href="index.html" class="links">Home</a></li>
-                <li><a href="src/services.html" class="links">Services</a></li>
-                <li><a href="src/order.html" class="links">Order</a></li>
-                <li><a href="src/about.html" class="links">About</a></li>
+                <li><a href="../index.html" class="links">Home</a></li>
+                <li><a href="services.html" class="links">Services</a></li>
+                <li><a href="order.html" class="links">Order</a></li>
+                <li><a href="about.html" class="links">About</a></li>
             </ul>
 
-        </nav>          
+        </nav>        
     </header>
     `;
 }
@@ -30,10 +40,10 @@ export function myFooter() {
 
         </div>
         <div>
-            <!--<iframe
+            <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13440.800737324296!2d51.6566032!3d32.6274921!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6edb7a59ae4bd12d!2z2K7YtNqp2LTZiNuM24wg2LLZhdix2K8!5e0!3m2!1sen!2skr!4v1673720681435!5m2!1sen!2skr"
                 width="80%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>-->
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div>
             <h2>Opening hours</h2>
