@@ -2,15 +2,19 @@ export function myHeader() {
   const header = document.querySelector(".mainHeader");
   header.innerHTML = `
     <header>
-        <nav>
+        <nav id="sidebar-menu">
+            <div id="bar-signUp">
+                <i class="fa-solid fa-bars bars"></i>
+                <a href="src/sign-up.html" class="links signUp-btn">Sign up</a>
+            </div>
             <ul>
-                <li><a href="../index.html" class="links">Home</a></li>
-                <li><a href="services.html" class="links">Services</a></li>
-                <li><a href="order.html" class="links">Order</a></li>
-                <li><a href="about.html" class="links">About</a></li>                                
-                <li class="rightSide"><a href="sign-up.html" class="links signUpInHeader">Sign up</a><span> / </span><a href="login.html" class="links login">Login</a></li>                
+                <li><a href="index.html" class="links">Home</a></li>
+                <li><a href="src/services.html" class="links">Services</a></li>
+                <li><a href="src/order.html" class="links">Order</a></li>
+                <li><a href="src/about.html" class="links">About</a></li>
             </ul>
-        </nav>                
+
+        </nav>          
     </header>
     `;
 }

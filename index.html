@@ -13,15 +13,28 @@
 
 <body>
     <header>
-        <nav>
+        <nav id="main-menu">
             <ul>
                 <li><a href="index.html" class="links">Home</a></li>
                 <li><a href="src/services.html" class="links">Services</a></li>
                 <li><a href="src/order.html" class="links">Order</a></li>
                 <li><a href="src/about.html" class="links">About</a></li>
-                <li class="rightSide"><a href="src/sign-up.html" class="links signUpInHeader">Sign up</a><span> /
+                <li class="rightSide"><a href="src/sign-up.html" class="links">Sign up</a><span> /
                     </span><a href="src/login.html" class="links login">Login</a></li>
             </ul>
+        </nav>
+        <nav id="sidebar-menu">
+            <div id="bar-signUp">
+                <i class="fa-solid fa-bars bars"></i>
+                <a href="src/sign-up.html" class="links signUp-btn">Sign up</a>
+            </div>
+            <ul>
+                <li><a href="index.html" class="links">Home</a></li>
+                <li><a href="src/services.html" class="links">Services</a></li>
+                <li><a href="src/order.html" class="links">Order</a></li>
+                <li><a href="src/about.html" class="links">About</a></li>
+            </ul>
+
         </nav>
     </header>
     <main>
@@ -36,52 +49,59 @@
         <h1 class="titles">How it works?</h1>
         <div class="threeColumns">
             <div class="how-it-works-items">
-                <i class="fa-solid fa-desktop"></i>
-                <i class="fa-solid fa-mobile-screen-button"></i> Plan your pick up and place
-                your order
+                <div>
+
+                    <i class="fa-solid fa-desktop"></i>
+                    <i class="fa-solid fa-mobile-screen-button"></i> Plan your pick up and place
+                    your order
+                </div>
             </div>
-            <div class="how-it-works-items"><i class="fa-solid fa-shirt"></i> Our driver will pick up your order</div>
-            <div class="how-it-works-items"><i class="fa-solid fa-truck-fast"></i> Your order will be delivered clean
-                and for free</div>
+            <div>
+                <i class="fa-solid fa-shirt"></i> Our driver will pick up your order
+            </div>
+            <div>
+                <i class="fa-solid fa-truck-fast"></i> Your order will be delivered clean and for free
+            </div>
         </div>
         <div class="order-btn">
             <a href="order.html" class="links">Order now <i class="fa-solid fa-basket-shopping"></i></a>
         </div>
         <h1 class="titles">Our services</h1>
-        <div class="threeColumns">
+        <div class="services">
+            <div class="divService">
+                <img src="assets/img/curtian.svg" alt="curtain">
+                <div>
+                    <h2>Curtains & Net Curtains</h2>
+                    <p>When cleaning your curtains there is always risk of them shrinking or losing their shape. That is
+                        why
+                        it
+                        is so important
+                        that to get this is done by a specialist. Look no further, you’ve come to the right place.</p>
+                </div>
+            </div>
+            <div class="divService">
 
-
-            <img src="assets/img/curtian.svg" alt="curtian">
-            <div>
-
-                <h2>Curtains & Net Curtains</h2>
-                <p>When cleaning your curtains there is always risk of them shrinking or losing their shape. That is
-                    why
-                    it
-                    is so important
-                    that to get this is done by a specialist. Look no further, you’ve come to the right place.</p>
+                <img src="assets/img/bed.svg" alt="bed">
+                <div>
+                    <h2>Duvets & Sheet Packages</h2>
+                    <p>Even though you might not clean your duvets daily, it is important to do it every once in a while
+                        for
+                        hygiene reasons.
+                        In order to prevent fungus, bacteria and dust mites, it is wise to have your duvet and pillows
+                        cleaned at least twice a
+                        year.</p>
+                </div>
             </div>
 
-            <img src="assets/img/bed.svg" alt="bed">
-            <div>
-                <h2>Duvets & Sheet Packages</h2>
-                <p>Even though you might not clean your duvets daily, it is important to do it every once in a while for
-                    hygiene reasons.
-                    In order to prevent fungus, bacteria and dust mites, it is wise to have your duvet and pillows
-                    cleaned at least twice a
-                    year.</p>
+            <div class="divService">
 
+                <img src="assets/img/leather.svg" alt="leather">
+                <div>
+                    <h2>Cleaning leather, suede and fur</h2>
+                    <p>You need a specialist to clean leather, suede and fur. Cleaning leather is fairly challenging.
+                    </p>
+                </div>
             </div>
-
-
-            <img src="assets/img/leather.svg" alt="leather">
-            <div>
-
-
-                <h2>Cleaning leather, suede and fur</h2>
-                <p>You need a specialist to clean leather, suede and fur. Cleaning leather is fairly challenging.</p>
-            </div>
-
         </div>
     </main>
     <footer>
@@ -93,10 +113,10 @@
 
             </div>
             <div>
-                <!--<iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13440.800737324296!2d51.6566032!3d32.6274921!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6edb7a59ae4bd12d!2z2K7YtNqp2LTZiNuM24wg2LLZhdix2K8!5e0!3m2!1sen!2skr!4v1673720681435!5m2!1sen!2skr"
-                        width="80%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>-->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13440.800737324296!2d51.6566032!3d32.6274921!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6edb7a59ae4bd12d!2z2K7YtNqp2LTZiNuM24wg2LLZhdix2K8!5e0!3m2!1sen!2skr!4v1673720681435!5m2!1sen!2skr"
+                    width="80%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div>
                 <h2>Opening hours</h2>
@@ -119,6 +139,7 @@
             <span>&copy 2023 Zomorod Laundry</span>
         </div>
     </footer>
+    <script src="index.js"></script>
 </body>
 
 </html>
