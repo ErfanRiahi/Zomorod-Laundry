@@ -2,11 +2,11 @@ const customerEmail = document.querySelector("#customerEmail");
 const customerPassword = document.querySelector("#customerPassword");
 const loginBtn = document.querySelector("#login");
 const profile = document.querySelector(".rightSide");
-const Login = document.querySelector("h1");
-// console.log(profile);
-// Login.addEventListener("click", () => {
-//   profile.innerHTML = '<i class="fa-regular fa-user"></i> ';
-// });
+const mobileProfile = document.querySelector(".signUp-btn");
+
+customerEmail.addEventListener("click", () => {
+  sessionStorage.setItem("userName", "Erfan");
+});
 
 loginBtn.addEventListener("click", () => {
   if (!customerEmail.value || !customerPassword.value) {
@@ -119,8 +119,14 @@ getOrder.addEventListener("click", () => {
 });
 
 function setProfile(data) {
-  const name = data.Name;
-  profile.innerHTML = `<i class="fa-regular fa-user"></i> ${name}`;
+  const userName = data.Name;
+  const userId = data.ID;
+  sessionStorage.setItem("userName", userName);
+  sessionStorage.setItem("userId", userId);
+  profile.innerHTML = `<a href="profile.html" class="links"><i class="fa-regular fa-user"></i> ${userName}</a>`;
   profile.style.color = "white";
-  // location.href = "index.html";
+  mobileProfile.innerHTML = `<i class="fa-regular fa-user"></i> ${userName}`;
+  mobileProfile.href = "profile.html";
+  mobileProfile.style.color = "white";
+  location.href = "profile.html";
 }

@@ -1,5 +1,17 @@
 export function myHeader() {
   const header = document.querySelector(".mainHeader");
+  let userName = sessionStorage.getItem("userName");
+  let profile, mobileProfile;
+
+  if (!userName) {
+    profile = `<a href="sign-up.html" class="links">Sign up</a><span> /
+                    </span><a href="login.html" class="links login">Login</a>`;
+    mobileProfile = `<a href="sign-up.html" class="links signUp-btn">Sign up</a>`;
+  } else {
+    profile = `<a href="profile.html" class="links"><i class="fa-regular fa-user"></i> ${userName}</a>`;
+    mobileProfile = `<a href="profile.html" class="links signUp-btn"><i class="fa-regular fa-user"></i> ${userName}</a>`;
+  }
+
   header.innerHTML = `
     <header>
         <nav id="main-menu">
@@ -8,14 +20,13 @@ export function myHeader() {
                 <li><a href="services.html" class="links">Services</a></li>
                 <li><a href="order.html" class="links">Order</a></li>
                 <li><a href="about.html" class="links">About</a></li>
-                <li class="rightSide"><a href="sign-up.html" class="links">Sign up</a><span> /
-                    </span><a href="login.html" class="links login">Login</a></li>
+                <li class="rightSide">${profile}</li>
             </ul>
         </nav>
         <nav id="sidebar-menu">
             <div id="bar-signUp">
                 <i class="fa-solid fa-bars bars"></i>
-                <a href="sign-up.html" class="links signUp-btn">Sign up</a>
+                ${mobileProfile}
             </div>
             <ul>
                 <li><a href="../index.html" class="links">Home</a></li>

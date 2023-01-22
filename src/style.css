@@ -434,7 +434,7 @@ footer {
   color: white;
 }
 
-table {
+#billTable {
   width: 500px;
   margin: 10px 0 10px 10px;
 }
@@ -491,7 +491,7 @@ table {
 }
 
 .clearBill:hover {
-  color: red;
+  color: orangered;
   cursor: pointer;
 }
 
@@ -500,6 +500,61 @@ table {
   cursor: pointer;
 }
 
+/************************** profile **************************/
+#container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  padding: 20px;
+}
+
+#userInfo {
+  width: 300px;
+  border: 1px solid #50c878;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+}
+
+.btn {
+  width: 100px;
+  padding: 10px;
+  margin: 10px;
+  border: 0;
+  border-radius: 5px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn:hover {
+  background-color: #50c878;
+  color: white;
+}
+
+#orderTable {
+  width: 350px;
+}
+
+#editProfileDiv {
+  border: 3px solid #50c878;
+  border-radius: 10px;
+  width: 500px;
+  margin: 5% auto;
+  text-align: center;
+  padding: 20px;
+}
+
+#editProfileDiv > div {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 20px;
+}
+
+#editProfileDiv > div * {
+  display: block;
+  margin: 20px 0;
+  padding: 5px;
+  width: 90%;
+}
+/************************** media query **************************/
 @media (max-width: 768px) {
   #main-menu {
     display: none;
@@ -512,11 +567,17 @@ table {
     font-size: 2em;
     z-index: 0;
   }
-  table {
+  #billTable,
+  #orderTable {
     width: 90%;
     margin: 10px auto;
   }
-  .signUp {
+  .signUp,
+  #editProfileDiv {
     width: 80%;
+  }
+  #userInfo {
+    width: 90%;
+    margin: 10px auto;
   }
 }

@@ -3,7 +3,7 @@ const customerTel = document.querySelector("#customerTel");
 const customerAddress = document.querySelector("#customerAddress");
 const customerPassword = document.querySelector("#customerPassword");
 const signUpBtn = document.querySelector("#signUp");
-
+console.log(sessionStorage.getItem("test"));
 signUpBtn.addEventListener("click", () => {
   if (!customerName.value || !customerTel.value || !customerEmail.value) {
     alert("You should complete the field with star");

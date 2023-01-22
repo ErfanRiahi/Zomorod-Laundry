@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | Zomorod Laundry</title>
+    <link rel="icon" type="image/png" href="../assets/img/washing-machine.png" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d1c68e1377.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="mainHeader"></header>
+    <div id="container">
+        <div id="userInfo"></div>
+        <div id="userOrder">
+            <table border="2px" id="orderTable">
+                <thead>
+                    <tr>
+                        <th colspan="4">Your Order(s)</th>
+                    </tr>
+                    <tr>
+                        <th>id</th>
+                        <th>Products</th>
+                        <th>Total</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <div id="editProfileDiv">
+        <h1>Edit Profile</h1>
+        <div>
+            <div>
+                <label for="customerName">Name</label>
+                <label for="customerTel">Tel</label>
+                <label for="customerEmail">Email</label>
+                <label for="customerAddress">Address</label>
+            </div>
+            <div>
+                <input type="text" id="customerName">
+                <input type="tel" id="customerTel" value="">
+                <input type="email" id="customerEmail">
+                <textarea id="customerAddress" class="question"></textarea>
+            </div>
+        </div>
+        <a href="profile.html"><button class="btn">Cancel</button></a>
+        <button class="btn" id="okBtn">Ok</button>
+    </div>
+
+    <footer class="mainFooter"></footer>
+
+    <script src="profile.js"></script>
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
