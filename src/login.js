@@ -42,3 +42,24 @@ function setProfile(data) {
   mobileProfile.style.color = "white";
   location.href = "profile.html";
 }
+
+const getUser = async (cid) => {
+  try {
+    let body = {
+      api_token: "e1cfd0f9b4a1f8f5d200749b797d43d5e07c0ada",
+      customerID: `${cid}`,
+    };
+
+    const res = await fetch("https://cleancloudapp.com/api/getCustomer", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    });
+    const data = await res.json();
+    setProfile(data);
+  } catch (error) {
+    alert("something went wrong\n" + error);
+  }
+};
