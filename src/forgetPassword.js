@@ -13,10 +13,7 @@ resetBtn.addEventListener("click", () => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(data),
-  })
-    .then((response) => response.json())
-    .then((data) => console.log("Success", data))
-    .catch((error) => console.log("Error", error));
+  }).catch((error) => console.log("Error", error));
 
   customerEmail.value = "";
   alert("We send you an email");

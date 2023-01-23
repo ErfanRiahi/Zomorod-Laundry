@@ -21,3 +21,7 @@ bars.addEventListener("click", () => {
     sidebarMenu.style.opacity = "0";
   }
 });
+
+const year = document.querySelector("#year");
+const d = new Date();
+year.innerHTML = d.getFullYear();

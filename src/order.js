@@ -14,8 +14,6 @@ const allProducts = [dry, laundry, pressed, repairs, alternations];
 
 const fetchAPI = async () => {
   try {
-    // const res = await fetch("data.json");
-
     const res = await fetch("https://cleancloudapp.com/api/getProducts", {
       method: "POST",
       headers: {
@@ -25,8 +23,6 @@ const fetchAPI = async () => {
         api_token: "e1cfd0f9b4a1f8f5d200749b797d43d5e07c0ada",
       }),
     });
-    // .then((response) => response.json())
-    // .then((data) => main(data))
 
     const data = await res.json();
     main(data.Products);
@@ -211,7 +207,7 @@ submit_btn.addEventListener("click", () => {
     products: orderList,
     finalTotal: finalPrice,
   };
-  // console.log(orderList);
+
   fetch("https://cleancloudapp.com/api/addOrder", {
     method: "POST",
     headers: {

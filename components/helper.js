@@ -74,7 +74,7 @@ export function myFooter() {
         </div>
     </div>
     <div id="copyright">
-        <span>&copy 2023 Zomorod Laundry</span>
+        <h4>&copy <span id="year"></span> Zomorrod Laundry</h4>
     </div>
     `;
 }

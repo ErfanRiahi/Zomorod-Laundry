@@ -47,8 +47,6 @@ function createProfile(data) {
 
   logOutBtn.className = "btn";
   editProfile.className = "btn";
-  // logOutBtn.id = "logOut";
-  // editProfile.id = "editProfileBtn";
 
   userInfo.append(
     user_name,
@@ -135,7 +133,6 @@ const deleteOrder = async (orderId) => {
   }
 };
 
-// const editProfileBtn = document.querySelector("#editProfileBtn");
 const editProfileDiv = document.querySelector("#editProfileDiv");
 const profilePage = document.querySelector("#container");
 const okBtn = document.querySelector("#okBtn");

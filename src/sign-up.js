@@ -3,7 +3,7 @@ const customerTel = document.querySelector("#customerTel");
 const customerAddress = document.querySelector("#customerAddress");
 const customerPassword = document.querySelector("#customerPassword");
 const signUpBtn = document.querySelector("#signUp");
-console.log(sessionStorage.getItem("test"));
+
 signUpBtn.addEventListener("click", () => {
   if (!customerName.value || !customerTel.value || !customerEmail.value) {
     alert("You should complete the field with star");
@@ -25,10 +25,7 @@ signUpBtn.addEventListener("click", () => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(data),
-  })
-    .then((response) => response.json())
-    .then((data) => console.log("Success", data))
-    .catch((error) => console.log("Error", error));
+  }).catch((error) => console.log("Error", error));
 
   location.href = "login.html";
 });
@@ -41,7 +38,6 @@ fetch(
   .catch((error) => console.log("Error", error));
 
 function setCallingCode(data) {
-  console.log("Success", data);
   const callCode = document.querySelector("input[type='tel'");
   callCode.value = data.calling_code;
 }
