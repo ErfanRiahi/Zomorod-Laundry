@@ -58,7 +58,10 @@ const getUser = async (cid) => {
       body: JSON.stringify(body),
     });
     const data = await res.json();
-    setProfile(data);
+    if (data.Error) {
+      alert("Your email or your Password is wrong\nTry again");
+      location.href = "login.html";
+    } else setProfile(data);
   } catch (error) {
     alert("something went wrong\n" + error);
   }
