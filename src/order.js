@@ -20,7 +20,7 @@ const fetchAPI = async () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        api_token: "e1cfd0f9b4a1f8f5d200749b797d43d5e07c0ada",
+        api_token: "f7292852be387f3b46ad34d4023b77131e2755c8",
       }),
     });
 
@@ -202,7 +202,7 @@ clear_btn.addEventListener("click", () => {
 submit_btn.addEventListener("click", () => {
   if (orderList.length == 0) return;
   let data = {
-    api_token: "e1cfd0f9b4a1f8f5d200749b797d43d5e07c0ada",
+    api_token: "f7292852be387f3b46ad34d4023b77131e2755c8",
     customerID: `${userId}`,
     products: orderList,
     finalTotal: finalPrice,

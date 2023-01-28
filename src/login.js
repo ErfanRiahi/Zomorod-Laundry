@@ -11,7 +11,7 @@ loginBtn.addEventListener("click", () => {
   }
 
   let data = {
-    api_token: "e1cfd0f9b4a1f8f5d200749b797d43d5e07c0ada",
+    api_token: "f7292852be387f3b46ad34d4023b77131e2755c8",
     customerEmail: customerEmail.value,
     customerPassword: customerPassword.value,
   };
@@ -46,7 +46,7 @@ function setProfile(data) {
 const getUser = async (cid) => {
   try {
     let body = {
-      api_token: "e1cfd0f9b4a1f8f5d200749b797d43d5e07c0ada",
+      api_token: "f7292852be387f3b46ad34d4023b77131e2755c8",
       customerID: `${cid}`,
     };
 

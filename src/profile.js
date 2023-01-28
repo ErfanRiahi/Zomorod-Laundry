@@ -5,11 +5,12 @@ const userOrder = document.querySelector("#userOrder");
 const logOutBtn = document.createElement("button");
 const editProfile = document.createElement("button");
 let userData;
+let apiToken = "f7292852be387f3b46ad34d4023b77131e2755c8";
 
 const getUser = async (cid) => {
   try {
     let body = {
-      api_token: "e1cfd0f9b4a1f8f5d200749b797d43d5e07c0ada",
+      api_token: apiToken,
       customerID: `${cid}`,
     };
 
@@ -68,7 +69,7 @@ logOutBtn.addEventListener("click", () => {
 const getOrder = async (cid) => {
   try {
     let body = {
-      api_token: "e1cfd0f9b4a1f8f5d200749b797d43d5e07c0ada",
+      api_token: apiToken,
       customerID: `${cid}`,
     };
     const res = await fetch("https://cleancloudapp.com/api/getOrders", {
@@ -117,7 +118,7 @@ function showOrders(data) {
 const deleteOrder = async (orderId) => {
   try {
     let data = {
-      api_token: "e1cfd0f9b4a1f8f5d200749b797d43d5e07c0ada",
+      api_token: apiToken,
       orderID: `${orderId}`,
     };
     const res = await fetch("https://cleancloudapp.com/api/deleteOrder", {
@@ -166,7 +167,7 @@ editProfile.addEventListener("click", () => {
 
     try {
       let data = {
-        api_token: "e1cfd0f9b4a1f8f5d200749b797d43d5e07c0ada",
+        api_token: apiToken,
         customerID: `${userId}`,
         customerName: newCustomerName,
         customerTel: newCustomerTel,

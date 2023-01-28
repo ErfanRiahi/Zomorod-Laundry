@@ -11,7 +11,7 @@ signUpBtn.addEventListener("click", () => {
   }
 
   let data = {
-    api_token: "e1cfd0f9b4a1f8f5d200749b797d43d5e07c0ada",
+    api_token: "f7292852be387f3b46ad34d4023b77131e2755c8",
     customerName: customerName.value,
     customerTel: customerTel.value,
     customerEmail: customerEmail.value,
