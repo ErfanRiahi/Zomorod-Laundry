@@ -1,5 +1,5 @@
 let userName = sessionStorage.getItem("userName");
-const userId = sessionStorage.getItem("userId");
+let userId = sessionStorage.getItem("userId");
 const user_name = document.querySelector("#nameOfUser");
 const userOrder = document.querySelector("#userOrder");
 const logOutBtn = document.createElement("button");
@@ -62,7 +62,9 @@ function createProfile(data) {
 
 logOutBtn.addEventListener("click", () => {
   userName = "";
+  userId = 0;
   sessionStorage.setItem("userName", userName);
+  sessionStorage.setItem("userId", userId);
   location.href = "login.html";
 });
 

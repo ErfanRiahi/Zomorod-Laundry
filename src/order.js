@@ -12,6 +12,10 @@ const repairs = document.querySelector(".repairs");
 const alternations = document.querySelector(".alternations");
 const allProducts = [dry, laundry, pressed, repairs, alternations];
 
+if (userId == 0) {
+  if (confirm("Please login for order")) location.href = "login.html";
+}
+
 const fetchAPI = async () => {
   try {
     const res = await fetch("https://cleancloudapp.com/api/getProducts", {
@@ -200,6 +204,11 @@ clear_btn.addEventListener("click", () => {
 });
 
 submit_btn.addEventListener("click", () => {
+  if (userId == 0) {
+    if (confirm("Please login for order")) location.href = "login.html";
+    else location.href = "order.html";
+  }
+  console.log(userId);
   if (orderList.length == 0) return;
   let data = {
     api_token: "f7292852be387f3b46ad34d4023b77131e2755c8",
@@ -218,7 +227,7 @@ submit_btn.addEventListener("click", () => {
     .then((response) => response.json())
     .then((data) => {
       alert(`Your order id is: ${data.orderID}\nHave a nice day :)`);
-      location.href = "../index.html";
+      location.href = "profile.html";
     })
     .catch((err) => console.log(err));
 });
