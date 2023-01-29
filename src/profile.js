@@ -62,7 +62,7 @@ function createProfile(data) {
 
 logOutBtn.addEventListener("click", () => {
   userName = "";
-  userId = 0;
+  userId = undefined;
   sessionStorage.setItem("userName", userName);
   sessionStorage.setItem("userId", userId);
   location.href = "login.html";

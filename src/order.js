@@ -12,7 +12,7 @@ const repairs = document.querySelector(".repairs");
 const alternations = document.querySelector(".alternations");
 const allProducts = [dry, laundry, pressed, repairs, alternations];
 
-if (userId == 0) {
+if (!userId) {
   if (confirm("Please login for order")) location.href = "login.html";
 }
 
@@ -204,7 +204,7 @@ clear_btn.addEventListener("click", () => {
 });
 
 submit_btn.addEventListener("click", () => {
-  if (userId == 0) {
+  if (!userId) {
     if (confirm("Please login for order")) location.href = "login.html";
     else location.href = "order.html";
   }
